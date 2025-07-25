@@ -13,6 +13,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Testing Project...."
+                sh '''
+                python hello.py
+                '''
             }
         }
         stage('Deploy') {
